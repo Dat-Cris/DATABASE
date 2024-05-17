@@ -43,7 +43,28 @@ SELECT *
 FROM boy 
 LEFT JOIN girl USING (id);             
 
-                 
+-- lEFT / RIGHT EXCLUDIGN JOIN 
+SELECT *
+FROM boy
+LEFT JOIN girl USING (id)
+WHERE girl.name IS NULL
+
+-- CROSS JOIN 
+SELECT * 
+FROM boy
+CROSS JOIN girl;
+
+-- UNION :HỢP
+SELECT * 
+FROM boy 
+EXCEPT
+SELECT*
+FROM girl;
+-- INTERSECT: GIAO 
+-- EXCEPT 
+
+
+
                  
                  
                  
